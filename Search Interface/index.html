@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Cut Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="./vid/Peach Pink Gradient Color and Style Video Background.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <div class="search-container">
+        <div class="dropdown">
+            <button class="dropbtn">
+                Categories 
+                <span class="arrow-down">&#9662;</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Everything</a>
+                <a href="#">Software Development</a>
+                <a href="#">Web Development</a>
+                <a href="#">Data Analyst</a>
+                <a href="#">IT Consultant</a>
+                <a href="#">Network Administrator</a>
+            </div>
+        </div>
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-btn">
+            <span class="search-icon">&#128269;</span>
+        </button>
+    </div>
+
+    <footer>
+        Made by Kajol Sharma
+    </footer>
+    
+    <script>
+        document.addEventListener('click', function(event) {
+            const dropdown = document.querySelector('.dropdown-content');
+            const dropdownButton = document.querySelector('.dropbtn');
+            
+            if (!dropdown.contains(event.target) && !dropdownButton.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            const dropdown = document.querySelector('.dropdown-content');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>
